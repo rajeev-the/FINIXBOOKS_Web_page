@@ -84,7 +84,7 @@ export default function Hero({ onOpenDemo }) {
         </h1>
 
         <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] max-w-2xl mx-auto leading-relaxed">
-          A high-precision financial runtime that unlocks real-time mobile voucher booking, automated WhatsApp receivables, and multi-branch operations while keeping your on-premise TallyPrime books 100% authoritative.
+          Mobile-first ERP that syncs live with TallyPrime — zero double-entry.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-6">

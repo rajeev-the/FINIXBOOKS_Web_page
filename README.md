@@ -25,12 +25,12 @@
 
 ## 📦 Component Repositories & Release Artifacts
 
-| Component | Stack | Description | Release Artifact |
-|---|---|---|---|
-| **📱 Mobile Application** | Flutter (Dart), Riverpod 2.0, FlChart | Field voucher booking, 1-tap WhatsApp reminders, offline SQLite spooling. | `FinixBooks-v4.1.0-release.apk` |
-| **⚙️ Cloud Backend Core** | Node.js, Express, MongoDB, BullMQ | High-concurrency RESTful APIs, RSA-256 JWT auth, Decimal.js tax splits. | `docker-compose.yml` |
-| **🖥️ Desktop Bridge Daemon** | Electron, Node.js, XML Port 9000 | 15MB Windows daemon communicating directly with Tally on localhost:9000. | `FinixBooks-Bridge-Setup-v4.1.0.exe` |
-| **🌐 Web Runtime & Portal** | React 19, Vite 8, Tailwind CSS v4 | High-density financial UI ("Ledger Sovereign") with real-time stream visualizer. | Web App / Static Bundle |
+| Component | Stack | Description | Repository | Release Artifact |
+|---|---|---|---|---|
+| **📱 Mobile Application** | Flutter (Dart), Riverpod 2.0, FlChart | Field voucher booking, 1-tap WhatsApp reminders, offline SQLite spooling. | [`rajeev-the/FINIXBOOKS_App`](https://github.com/rajeev-the/FINIXBOOKS_App) | `FinixBooks-v4.1.0-release.apk` |
+| **⚙️ Cloud Backend Core** | Node.js, Express, MongoDB, BullMQ | High-concurrency RESTful APIs, RSA-256 JWT auth, Decimal.js tax splits. | [`rajeev-the/FINIXBOOKS_Backend`](https://github.com/rajeev-the/FINIXBOOKS_Backend) | `docker-compose.yml` |
+| **🖥️ Desktop Bridge Daemon** | Electron, Node.js, XML Port 9000 | 15MB Windows daemon communicating directly with Tally on localhost:9000. | [`rajeev-the/FINIXBOOKS_EXE`](https://github.com/rajeev-the/FINIXBOOKS_EXE) | `FinixBooks-Bridge-Setup-v4.1.0.exe` |
+| **🌐 Web Runtime & Portal** | React 19, Vite 8, Tailwind CSS v4 | High-density financial UI ("Ledger Sovereign") with real-time stream visualizer. | [`rajeev-the/FINIXBOOKS_Web_page`](https://github.com/rajeev-the/FINIXBOOKS_Web_page) | Web App / Static Bundle |
 
 ---
 
@@ -69,7 +69,7 @@ git add .
 git commit -m "feat: complete FinixBooks dual-ledger platform with repositories showcase and scroll animations"
 
 # 2. Add your GitHub remote repository
-git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>.git
+git remote add origin https://github.com/rajeev-the/FINIXBOOKS_Web_page.git
 
 # 3. Rename branch to main (if needed) and push
 git branch -M main

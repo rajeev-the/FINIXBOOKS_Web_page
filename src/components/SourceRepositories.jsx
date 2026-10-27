@@ -18,7 +18,7 @@ const REPOSITORIES = [
   {
     id: 'mobile',
     icon: Smartphone,
-    name: 'finixbooks-mobile',
+    name: 'FINIXBOOKS_App',
     title: 'Mobile Application',
     stack: 'Flutter (Dart) · Riverpod 2.0',
     desc: 'Cross-platform iOS and Android client with offline SQLite spooling and FlChart visualizers.',
@@ -26,7 +26,8 @@ const REPOSITORIES = [
     forks: 46,
     language: 'Dart',
     license: 'MIT',
-    cloneUrl: 'https://github.com/finixbooks/finixbooks-mobile.git',
+    repoUrl: 'https://github.com/rajeev-the/FINIXBOOKS_App',
+    cloneUrl: 'https://github.com/rajeev-the/FINIXBOOKS_App.git',
     releaseFile: 'FinixBooks-v4.1.0-release.apk',
     releaseSize: '38.4 MB',
     tags: ['Flutter', 'Riverpod', 'FlChart', 'Offline SQLite'],
@@ -34,7 +35,7 @@ const REPOSITORIES = [
   {
     id: 'backend',
     icon: Cpu,
-    name: 'finixbooks-backend-api',
+    name: 'FINIXBOOKS_Backend',
     title: 'Cloud Microservices Core',
     stack: 'Node.js · Express · MongoDB',
     desc: 'RESTful API gateway with RSA-256 JWT auth, Decimal.js GST splits, and BullMQ worker queue.',
@@ -42,7 +43,8 @@ const REPOSITORIES = [
     forks: 68,
     language: 'JavaScript',
     license: 'MIT',
-    cloneUrl: 'https://github.com/finixbooks/finixbooks-backend-api.git',
+    repoUrl: 'https://github.com/rajeev-the/FINIXBOOKS_Backend',
+    cloneUrl: 'https://github.com/rajeev-the/FINIXBOOKS_Backend.git',
     releaseFile: 'docker-compose.yml',
     releaseSize: '2.4 KB',
     tags: ['Node.js', 'Express', 'MongoDB 7.0', 'WebSocket'],
@@ -50,7 +52,7 @@ const REPOSITORIES = [
   {
     id: 'bridge',
     icon: Server,
-    name: 'finixbooks-bridge-daemon',
+    name: 'FINIXBOOKS_EXE',
     title: 'Windows Desktop Bridge .exe',
     stack: 'Electron · Node.js · XML Port 9000',
     desc: '15MB local relay daemon connecting cloud event streams directly to TallyPrime / ERP 9 on localhost:9000.',
@@ -58,7 +60,8 @@ const REPOSITORIES = [
     forks: 34,
     language: 'C++ / JS',
     license: 'MIT',
-    cloneUrl: 'https://github.com/finixbooks/finixbooks-bridge-daemon.git',
+    repoUrl: 'https://github.com/rajeev-the/FINIXBOOKS_EXE',
+    cloneUrl: 'https://github.com/rajeev-the/FINIXBOOKS_EXE.git',
     releaseFile: 'FinixBooks-Bridge-Setup-v4.1.0.exe',
     releaseSize: '15.2 MB',
     tags: ['Electron', 'Tally XML', 'Port 9000', 'Win32/x64'],
@@ -66,7 +69,7 @@ const REPOSITORIES = [
   {
     id: 'web',
     icon: Globe,
-    name: 'finixbooks-web-portal',
+    name: 'FINIXBOOKS_Web_page',
     title: 'Web Runtime & Dashboard',
     stack: 'React 19 · Vite · Tailwind v4',
     desc: 'Ledger Sovereign high-density interface with sub-second stream visualizer and MCA compliance exports.',
@@ -74,7 +77,8 @@ const REPOSITORIES = [
     forks: 72,
     language: 'TypeScript / React',
     license: 'MIT',
-    cloneUrl: 'https://github.com/finixbooks/finixbooks-web-portal.git',
+    repoUrl: 'https://github.com/rajeev-the/FINIXBOOKS_Web_page',
+    cloneUrl: 'https://github.com/rajeev-the/FINIXBOOKS_Web_page.git',
     releaseFile: 'npm-package-release.tgz',
     releaseSize: '1.2 MB',
     tags: ['React 19', 'Vite 8', 'Tailwind CSS', 'Tabular UI'],
@@ -142,7 +146,7 @@ export default function SourceRepositories() {
                         {repo.title}
                       </span>
                       <a
-                        href={repo.cloneUrl}
+                        href={repo.repoUrl || repo.cloneUrl}
                         target="_blank"
                         rel="noreferrer"
                         className="font-medium text-[#1E3329] hover:underline flex items-center gap-1"
@@ -213,7 +217,7 @@ export default function SourceRepositories() {
                   </button>
 
                   <a
-                    href={repo.cloneUrl}
+                    href={repo.repoUrl || repo.cloneUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="px-3 py-1 bg-[#1E3329] hover:bg-[#254234] text-[#7CF2C2] rounded-xs transition-colors flex items-center gap-1 cursor-pointer"

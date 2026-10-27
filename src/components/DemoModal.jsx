@@ -80,7 +80,7 @@ export default function DemoModal({ isOpen, onClose }) {
               ENTERPRISE DEMO ATTACHMENT
             </div>
             <h3 className="font-serif-display text-2xl text-[#1E3329] mb-1">
-              Test LedgerFlow with your data
+              Test FinixBooks with your data
             </h3>
             <p className="text-[#5E6F66] text-[11px] mb-5 leading-relaxed">
               Safe read-only sandbox or live pilot on your local Tally company file.

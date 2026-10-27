@@ -13,7 +13,7 @@ export default function Navbar({ onOpenDemo }) {
             href="#"
             className="font-serif-display text-2xl tracking-tight text-[#1E3329] flex items-center gap-1.5 font-normal"
           >
-            LEDGERFLOW
+            FINIXBOOKS
           </a>
         </div>
 

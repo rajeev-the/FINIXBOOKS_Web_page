@@ -1,4 +1,4 @@
-# LEDGERFLOW · Dual-Ledger Financial Runtime
+# FINIXBOOKS · Dual-Ledger Financial Runtime
 
 > Production dual-ledger runtime with deterministic bidirectional replication to desktop TallyPrime / ERP 9 over native XML HTTP port 9000.
 
@@ -27,9 +27,9 @@
 
 | Component | Stack | Description | Release Artifact |
 |---|---|---|---|
-| **📱 Mobile Application** | Flutter (Dart), Riverpod 2.0, FlChart | Field voucher booking, 1-tap WhatsApp reminders, offline SQLite spooling. | `LedgerFlow-v4.1.0-release.apk` |
+| **📱 Mobile Application** | Flutter (Dart), Riverpod 2.0, FlChart | Field voucher booking, 1-tap WhatsApp reminders, offline SQLite spooling. | `FinixBooks-v4.1.0-release.apk` |
 | **⚙️ Cloud Backend Core** | Node.js, Express, MongoDB, BullMQ | High-concurrency RESTful APIs, RSA-256 JWT auth, Decimal.js tax splits. | `docker-compose.yml` |
-| **🖥️ Desktop Bridge Daemon** | Electron, Node.js, XML Port 9000 | 15MB Windows daemon communicating directly with Tally on localhost:9000. | `LedgerFlow-Bridge-Setup-v4.1.0.exe` |
+| **🖥️ Desktop Bridge Daemon** | Electron, Node.js, XML Port 9000 | 15MB Windows daemon communicating directly with Tally on localhost:9000. | `FinixBooks-Bridge-Setup-v4.1.0.exe` |
 | **🌐 Web Runtime & Portal** | React 19, Vite 8, Tailwind CSS v4 | High-density financial UI ("Ledger Sovereign") with real-time stream visualizer. | Web App / Static Bundle |
 
 ---
@@ -66,7 +66,7 @@ To upload this codebase to your own GitHub account:
 ```bash
 # 1. Stage and commit all files
 git add .
-git commit -m "feat: complete LedgerFlow dual-ledger platform with repositories showcase and scroll animations"
+git commit -m "feat: complete FinixBooks dual-ledger platform with repositories showcase and scroll animations"
 
 # 2. Add your GitHub remote repository
 git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>.git
@@ -79,4 +79,4 @@ git push -u origin main
 ---
 
 ## 📄 License
-MIT License © 2025 LedgerFlow Technologies Inc.
+MIT License © 2025 FinixBooks Technologies Inc.

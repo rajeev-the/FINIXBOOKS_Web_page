@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Col 1 */}
           <div className="md:col-span-5 space-y-4">
             <div className="font-serif-display text-2xl text-[#E4EAE4] tracking-tight font-normal">
-              LEDGERFLOW
+              FINIXBOOKS
             </div>
             <p className="text-xs text-[#89A799] max-w-sm leading-relaxed">
               Dual-ledger runtime for Indian enterprise accounting. Bidirectional replication to
@@ -136,9 +136,9 @@ export default function Footer() {
 
         {/* Footer bottom */}
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[10px] text-[#6B8C7E]">
-          <div>© {CURRENT_YEAR} LedgerFlow Technologies Inc. All rights reserved.</div>
+          <div>© {CURRENT_YEAR} FinixBooks Technologies Inc. All rights reserved.</div>
           <div className="max-w-xl text-left md:text-right text-[#577266]">
-            Tally and TallyPrime are trademarks of Tally Solutions Pvt. Ltd. LedgerFlow is an
+            Tally and TallyPrime are trademarks of Tally Solutions Pvt. Ltd. FinixBooks is an
             independent enterprise system and is not affiliated with or endorsed by Tally Solutions.
           </div>
         </div>

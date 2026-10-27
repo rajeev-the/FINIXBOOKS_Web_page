@@ -49,7 +49,7 @@ export default function AppLoader({ onFinish }) {
       <div className="flex items-center justify-between text-[10px] text-[#89A799] tracking-wider uppercase">
         <span className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[#7CF2C2] animate-pulse"></span>
-          LEDGERFLOW RUNTIME v4.1
+          FINIXBOOKS RUNTIME v4.1
         </span>
         <span className="font-mono-metric">PORT 9000 // AES-256</span>
       </div>
@@ -57,7 +57,7 @@ export default function AppLoader({ onFinish }) {
       {/* Center Display */}
       <div className="max-w-md mx-auto w-full text-center space-y-4">
         <div className="font-serif-display text-3xl sm:text-4xl text-white font-normal tracking-tight">
-          LEDGERFLOW
+          FINIXBOOKS
         </div>
 
         {/* Minimal Progress Bar */}

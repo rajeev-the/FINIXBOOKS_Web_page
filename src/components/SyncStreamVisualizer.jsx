@@ -82,7 +82,7 @@ export default function SyncStreamVisualizer({ onTriggerSync }) {
           LOC: 127.0.0.1:9000/XML
         </div>
         <div className="absolute top-2 right-3 text-[9px] text-[#6B8C7E] tracking-widest pointer-events-none select-none">
-          DEST: HTTPS://CLOUD.LEDGERFLOW.IN
+          DEST: HTTPS://CLOUD.FINIXBOOKS.IN
         </div>
 
         {/* SVG Carrier Waves & Flowing Laser Particles */}

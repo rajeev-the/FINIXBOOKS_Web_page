@@ -72,26 +72,31 @@ export default function Hero({ onOpenDemo }) {
   return (
     <section className="max-w-7xl mx-auto px-6 sm:px-8 pt-12 pb-20 relative overflow-hidden animate-hero-enter">
       {/* Hero Headline Block */}
-      <div className="text-center max-w-3xl mx-auto mb-8 pt-4">
+      <div className="text-center max-w-3xl mx-auto mb-10 pt-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D6E2D8] hairline-border text-[10px] uppercase font-mono-fine tracking-[0.16em] text-[#1E3329] mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+          <span>DUAL-LEDGER RUNTIME · BIDIRECTIONAL TALLY REPLICATION</span>
+        </div>
+
         <h1 className="font-serif-display text-4xl sm:text-5xl md:text-6xl text-[#1E3329] leading-[1.12] mb-4 font-normal tracking-tight">
           Your books, beyond Tally —<br />
           <span className="italic">always in sync with it.</span>
         </h1>
 
-        <p className="font-mono-fine text-sm text-[#5E6F66] max-w-xl mx-auto">
-          Dual-ledger runtime with deterministic bidirectional replication to TallyPrime.
+        <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] max-w-2xl mx-auto leading-relaxed">
+          A high-precision financial runtime that unlocks real-time mobile voucher booking, automated WhatsApp receivables, and multi-branch operations while keeping your on-premise TallyPrime books 100% authoritative.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
           <a
             href="#features"
-            className="btn-mint px-5 py-2 rounded-full text-xs font-mono-fine uppercase tracking-wider flex items-center gap-1.5 cursor-pointer shadow-xs"
+            className="btn-mint px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider flex items-center gap-1.5 cursor-pointer shadow-xs"
           >
             <span>Explore 10 Key Modules</span>
           </a>
           <button
             onClick={onOpenDemo}
-            className="px-5 py-2 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
+            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
           >
             Request Live Demo
           </button>

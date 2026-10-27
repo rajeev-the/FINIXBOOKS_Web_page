@@ -98,21 +98,18 @@ export default function SourceRepositories() {
 
   return (
     <section className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-20 hairline-t" id="repositories">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <div>
-          <span className="text-[10px] uppercase font-mono-fine tracking-widest text-[#5E6F66] font-medium block mb-1.5">
-            SOURCE CODE &amp; BINARIES
-          </span>
-          <h2 className="font-serif-display text-2xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
-            GitHub Repositories &amp; Releases
-          </h2>
+      {/* Header with Eyebrow, Main Heading & Informative Subheading */}
+      <div className="max-w-3xl mb-10">
+        <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium flex items-center gap-1.5 mb-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
+          OPEN-SOURCE CODEBASES &amp; RELEASE PACKAGES
         </div>
-        <div className="text-xs font-mono-fine text-[#5E6F66] flex items-center gap-3">
-          <span>Production Releases v4.1.0</span>
-          <span>·</span>
-          <span>MIT License</span>
-        </div>
+        <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
+          GitHub Repositories &amp; Binaries.
+        </h2>
+        <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
+          Inspect, clone, or deploy the complete source code across the Flutter mobile app, cloud backend microservices, Windows desktop bridge daemon, and web runtime portal.
+        </p>
       </div>
 
       {downloadNotice && (
@@ -233,3 +230,4 @@ export default function SourceRepositories() {
     </section>
   )
 }
+

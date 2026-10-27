@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Plus, Minus, Sparkles, CheckCircle2 } from 'lucide-react'
+import { Plus, Minus, CheckCircle2 } from 'lucide-react'
 
 const ACCORDION_ITEMS = [
   {
@@ -50,15 +50,15 @@ export default function AiSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column */}
         <div className="lg:col-span-5">
-          <div className="text-[10px] uppercase font-mono-fine tracking-widest text-[#5E6F66] mb-1.5 font-medium flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-[#1E3329]" />
-            INTELLIGENCE
+          <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] mb-2 font-medium flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
+            DETERMINISTIC INTELLIGENCE
           </div>
-          <h2 className="font-serif-display text-2xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
-            Deterministic inference.
+          <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
+            Deterministic inference on verified ledgers.
           </h2>
-          <p className="font-mono-fine text-xs text-[#5E6F66] mt-2 leading-relaxed">
-            Every answer links directly to verified voucher serials and HSN codes.
+          <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
+            Zero hallucinations. Every financial question translates into exact relational queries linked directly to verified voucher serials, GSTINs, and HSN codes.
           </p>
 
           <div className="mt-5 p-3.5 hairline-border bg-[#D6E2D8] font-mono-fine text-xs text-[#1E3329] rounded-xs">

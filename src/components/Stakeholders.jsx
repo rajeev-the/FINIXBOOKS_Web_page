@@ -31,18 +31,18 @@ export default function Stakeholders() {
   return (
     <section className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-20 hairline-t">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <div>
-          <span className="text-[10px] uppercase font-mono-fine tracking-widest text-[#5E6F66] font-medium block mb-1.5">
-            STAKEHOLDERS
-          </span>
-          <h2 className="font-serif-display text-2xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
-            Tailored for each workflow.
-          </h2>
+      {/* Header with Eyebrow, Main Heading & Informative Subheading */}
+      <div className="max-w-3xl mb-10">
+        <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium flex items-center gap-1.5 mb-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
+          ROLE-BASED WORKFLOW SPECIALIZATION
         </div>
-        <div className="text-xs font-mono-fine text-[#5E6F66]">
-          Unified permissions across accountants, founders, and auditors.
-        </div>
+        <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
+          Tailored for each financial stakeholder.
+        </h2>
+        <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
+          Dedicated operational views optimized for the keyboard shortcuts of senior accountants, the mobile oversight of business owners, and the compliance requirements of CA firms.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">

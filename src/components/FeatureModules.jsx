@@ -262,15 +262,16 @@ export default function FeatureModules() {
     <section className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-20 hairline-t" id="features">
       {/* Header and Perspective Mode Switcher */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-        <div>
-          <span className="text-[10px] uppercase font-mono-fine tracking-widest text-[#5E6F66] font-medium block mb-1.5">
-            FEATURE MODULES
-          </span>
-          <h2 className="font-serif-display text-2xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
-            10 Enterprise Capabilities.
+        <div className="max-w-2xl">
+          <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium flex items-center gap-1.5 mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block"></span>
+            COMPREHENSIVE CAPABILITIES
+          </div>
+          <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
+            10 Key Feature Modules.
           </h2>
-          <p className="font-mono-fine text-xs text-[#5E6F66] mt-1.5">
-            Switch between functional product outcomes and under-the-hood technical specs.
+          <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
+            From executive command centers and automated aging buckets to on-the-go voucher creation, CA-grade financial statements, and 1-click GST reconciliation. Built for business operators, architected for software engineers.
           </p>
         </div>
 

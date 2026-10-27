@@ -41,18 +41,17 @@ export default function MeasurableImpact() {
 
   return (
     <section className="max-w-7xl mx-auto px-6 sm:px-8 py-16 hairline-t" id="impact">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <div>
-          <span className="text-[10px] uppercase font-mono-fine tracking-widest text-[#5E6F66] font-medium block mb-1.5">
-            MEASURABLE IMPACT
-          </span>
-          <h2 className="font-serif-display text-2xl sm:text-3xl text-[#1E3329] font-normal tracking-tight">
-            Enterprise ROI. Quantified.
-          </h2>
+      <div className="max-w-3xl mb-10">
+        <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium flex items-center gap-1.5 mb-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
+          MEASURABLE IMPACT &amp; VALUE PROPOSITION
         </div>
-        <div className="text-xs font-mono-fine text-[#5E6F66]">
-          Production benchmarks across active enterprise ledgers.
-        </div>
+        <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
+          Quantified operational gains.
+        </h2>
+        <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
+          Production benchmarks recorded across high-volume manufacturing plants, wholesale distribution hubs, and CA practices running concurrent distributed branches.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

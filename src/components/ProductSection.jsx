@@ -27,13 +27,16 @@ export default function ProductSection() {
       <div className="p-6 sm:p-10 hairline-border bg-[#D6E2D8] rounded-xs shadow-xs">
         {/* Header with Segmented Toggle */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 hairline-b">
-          <div>
-            <span className="text-[10px] uppercase font-mono-fine tracking-widest text-[#5E6F66] font-medium block mb-1">
-              DUAL-LEDGER RUNTIME
+          <div className="max-w-xl">
+            <span className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium block mb-1.5">
+              DUAL-LEDGER ARTIFACT
             </span>
             <h2 className="font-serif-display text-2xl sm:text-3xl text-[#1E3329] font-normal tracking-tight">
               One ledger. Multi-platform. Zero re-entry.
             </h2>
+            <p className="font-mono-fine text-xs text-[#5E6F66] mt-2 leading-relaxed">
+              Eliminate day-end data entry bottlenecks. Field transactions booked on mobile stream seamlessly into desktop TallyPrime with immutable audit verification.
+            </p>
           </div>
 
           {/* Segmented Toggle */}

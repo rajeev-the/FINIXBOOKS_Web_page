@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --paper: #E4EAE4;
+    --panel: #D6E2D8;
+    --ink: #1E3329;
+    --muted: #5E6F66;
+    --hairline: rgba(30, 51, 41, 0.18);
+    --mint: #7CF2C2;
+    --tint-blue: #D9E4EC;
+    --tint-lavender: #DEDCEC;
+    --tint-sage: #D3E3D6;
+    --dark-green: #0B1612;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-mono-fine {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-mono-metric {
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-ui {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hairline-border {
+  border: 1px solid rgba(30, 51, 41, 0.18);
+}
+
+.hairline-b {
+  border-bottom: 1px solid rgba(30, 51, 41, 0.18);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(30, 51, 41, 0.18);
+}
+
+.hairline-r {
+  border-right: 1px solid rgba(30, 51, 41, 0.18);
+}
+
+.hairline-l {
+  border-left: 1px solid rgba(30, 51, 41, 0.18);
+}
+
+.btn-mint {
+  background-color: #7CF2C2;
+  color: #1E3329;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-mint:hover {
+  filter: brightness(0.95);
+  box-shadow: 0 4px 12px rgba(124, 242, 194, 0.35);
+}
+
+.bg-paper {
+  background-color: #E4EAE4;
+}
+
+.bg-panel {
+  background-color: #D6E2D8;
+}
+
+.text-ink {
+  color: #1E3329;
+}
+
+.text-muted-custom {
+  color: #5E6F66;
+}
+
+.bg-near-black {
+  background-color: #0B1612;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes sinDrift {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.drift-line {
+  animation: sinDrift 6s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.pulse-led {
+  animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.35); opacity: 0.25; }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes streamDash {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.stream-dash {
+  stroke-dasharray: 8 12;
+  animation: streamDash 3s linear infinite;
+}
+
+.stream-dash-fast {
+  stroke-dasharray: 6 10;
+  animation: streamDash 1.2s linear infinite;
+}
+
+@keyframes reverseStreamDash {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 200; }
+}
+
+.stream-dash-reverse {
+  stroke-dasharray: 6 14;
+  animation: reverseStreamDash 4s linear infinite;
+}
+
+/* Scroll Reveal Classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal-left.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-fade {
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.scroll-reveal-fade.is-revealed {
+  opacity: 1;
+}
+
+/* Page Load Animation Keyframes */
+@keyframes pageFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes navSlideDown {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes heroFadeUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-page-enter {
+  animation: pageFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-nav-enter {
+  animation: navSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-enter {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+

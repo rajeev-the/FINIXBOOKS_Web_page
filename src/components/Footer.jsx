@@ -72,6 +72,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a className="hover:text-[#7CF2C2] transition-colors" href="#app-showcase">
+                  Live App UI (16 Screens)
+                </a>
+              </li>
+              <li>
                 <a className="hover:text-[#7CF2C2] transition-colors" href="#technical-highlights">
                   Case Study (Tech)
                 </a>

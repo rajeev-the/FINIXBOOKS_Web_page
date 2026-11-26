@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RefreshCw, Copy, Check } from 'lucide-react'
+import { RefreshCw, Copy, Check, Smartphone } from 'lucide-react'
 import SyncStreamVisualizer from './SyncStreamVisualizer'
 
 const VOUCHER_DATA = [
@@ -94,11 +94,18 @@ export default function Hero({ onOpenDemo }) {
           >
             <span>Explore 10 Key Modules</span>
           </a>
+          <a
+            href="#app-showcase"
+            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs flex items-center gap-1.5"
+          >
+            <Smartphone className="w-3.5 h-3.5 text-[#10B981]" />
+            <span>Live App UI</span>
+          </a>
           <button
             onClick={onOpenDemo}
-            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
+            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#5E6F66] hover:text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
           >
-            Request Live Demo
+            Request Demo
           </button>
         </div>
       </div>

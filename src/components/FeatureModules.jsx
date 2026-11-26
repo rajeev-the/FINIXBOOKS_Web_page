@@ -701,6 +701,26 @@ export default function FeatureModules() {
           )}
         </div>
       </div>
+
+      {/* Banner linking to full UI Showcase */}
+      <div className="mt-8 p-4 bg-[#D6E2D8] hairline-border rounded-xs flex flex-col sm:flex-row items-center justify-between gap-4 font-mono-fine text-xs">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-[#1E3329] text-[#7CF2C2] flex items-center justify-center shrink-0">
+            <Eye className="w-4 h-4" />
+          </div>
+          <div>
+            <div className="text-[#1E3329] font-medium">Want to inspect these modules on real device screens?</div>
+            <div className="text-[10px] text-[#5E6F66]">Browse 16 authentic Flutter UI screenshots with interactive phone preview &amp; lightbox zoom.</div>
+          </div>
+        </div>
+        <a
+          href="#app-showcase"
+          className="btn-mint px-4 py-2 rounded-full text-[11px] uppercase tracking-wider flex items-center gap-1.5 shrink-0 cursor-pointer shadow-xs"
+        >
+          <span>View 16 App UI Screens</span>
+          <ChevronRight className="w-3.5 h-3.5" />
+        </a>
+      </div>
     </section>
   )
 }

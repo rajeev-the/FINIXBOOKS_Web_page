@@ -1,20 +1,33 @@
 import React from 'react'
+import { ArrowUpRight, Smartphone } from 'lucide-react'
+import screen06 from '../assets/screenshots/06-party-receivables-aging.jpeg'
 
 export default function Surfaces() {
   return (
     <section className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-20 hairline-t" id="platforms">
       {/* Header with Eyebrow, Main Heading & Informative Subheading */}
-      <div className="max-w-3xl mb-10">
-        <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium flex items-center gap-1.5 mb-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
-          MULTI-DEVICE SURFACES
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div className="max-w-3xl">
+          <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium flex items-center gap-1.5 mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
+            MULTI-DEVICE SURFACES
+          </div>
+          <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
+            Authentic native interfaces.
+          </h2>
+          <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
+            High-density financial layouts designed for tabular numeral scanning — whether reviewing trial balances in Chrome, daybooks on Windows, or overdue aging on mobile.
+          </p>
         </div>
-        <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
-          Authentic native interfaces.
-        </h2>
-        <p className="font-mono-fine text-xs sm:text-sm text-[#5E6F66] mt-2.5 leading-relaxed">
-          High-density financial layouts designed for tabular numeral scanning — whether reviewing trial balances in Chrome, daybooks on Windows, or overdue aging on mobile.
-        </p>
+
+        <a
+          href="#app-showcase"
+          className="self-start sm:self-end font-mono-fine text-[11px] uppercase tracking-wider text-[#1E3329] hover:underline flex items-center gap-1.5 py-1"
+        >
+          <Smartphone className="w-3.5 h-3.5 text-[#10B981]" />
+          <span>Explore 16 Mobile Screens</span>
+          <ArrowUpRight className="w-3.5 h-3.5 text-[#5E6F66]" />
+        </a>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -112,40 +125,38 @@ export default function Surfaces() {
           </div>
         </div>
 
-        {/* Frame 3: Mobile Receivables */}
+        {/* Frame 3: Real Mobile App Screenshot Frame */}
         <div className="hairline-border bg-[#D6E2D8] overflow-hidden rounded-xs shadow-xs flex flex-col justify-between">
           <div>
             <div className="hairline-b bg-[#E4EAE4] px-4 py-2 flex items-center justify-between text-[10px] font-mono-fine text-[#5E6F66]">
-              <span className="font-medium text-[#1E3329]">MOBILE (PWA / IOS)</span>
-              <span className="uppercase">RECEIVABLES</span>
+              <span className="font-medium text-[#1E3329]">FLUTTER (IOS / ANDROID)</span>
+              <span className="uppercase">AGING REPORT</span>
             </div>
             <div className="p-4 font-mono-fine text-xs">
-              <div className="text-sm font-medium text-[#1E3329]">Overdue (&gt;90d)</div>
-              <div className="text-[10px] text-[#5E6F66] mb-3">Risk Matrix</div>
-
-              <div className="space-y-2.5 hairline-t pt-2.5">
-                <div className="hairline-b pb-1.5">
-                  <div className="flex justify-between text-[#1E3329] font-medium">
-                    <span>Balaji Steel Pipes</span>
-                    <span className="font-mono-metric">₹14,50,000</span>
-                  </div>
-                  <div className="text-[10px] text-[#5E6F66]">114 days</div>
-                </div>
-
-                <div className="hairline-b pb-1.5">
-                  <div className="flex justify-between text-[#1E3329] font-medium">
-                    <span>Krishna Auto</span>
-                    <span className="font-mono-metric">₹8,20,400</span>
-                  </div>
-                  <div className="text-[10px] text-[#5E6F66]">92 days</div>
-                </div>
-
+              <div className="flex items-center justify-between">
                 <div>
-                  <div className="flex justify-between text-[#1E3329] font-medium">
-                    <span>Southern Freight</span>
-                    <span className="font-mono-metric">₹6,15,000</span>
-                  </div>
-                  <div className="text-[10px] text-[#5E6F66]">98 days</div>
+                  <div className="text-sm font-medium text-[#1E3329]">Abc Ltd • Debtor Aging</div>
+                  <div className="text-[10px] text-[#5E6F66] mb-3">Live Field Receivables</div>
+                </div>
+                <a
+                  href="#app-showcase"
+                  className="text-[10px] text-[#1E3329] bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] px-2 py-1 rounded transition-colors"
+                >
+                  View UI
+                </a>
+              </div>
+
+              {/* Real Mini App Preview Container */}
+              <div className="relative h-44 rounded-xs overflow-hidden hairline-border bg-[#0E1713] flex items-center justify-center">
+                <img
+                  src={screen06}
+                  alt="Party Receivables Aging"
+                  className="w-full h-full object-cover object-top filter contrast-[1.02]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E1713]/80 via-transparent to-black/30 pointer-events-none"></div>
+                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] text-[#7CF2C2]">
+                  <span className="bg-[#0B1612]/90 px-2 py-0.5 rounded font-mono-metric">0–90+ Days Aging</span>
+                  <span className="bg-[#0B1612]/90 px-2 py-0.5 rounded font-mono-metric">WhatsApp Trigger</span>
                 </div>
               </div>
             </div>
@@ -153,9 +164,10 @@ export default function Surfaces() {
 
           <div className="p-4 pt-0">
             <div className="hairline-t pt-2.5 flex justify-between text-[10px] text-[#5E6F66] font-mono-fine">
-              <span className="uppercase">TOTAL OVERDUE</span>
-              <span className="text-[#1E3329] font-medium font-mono-metric text-sm">
-                ₹28,85,400
+              <span className="uppercase">REPLICATION</span>
+              <span className="text-[#1E3329] font-medium font-mono-metric text-xs flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                Instant Tally Sync
               </span>
             </div>
           </div>

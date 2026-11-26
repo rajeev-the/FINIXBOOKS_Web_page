@@ -32,6 +32,13 @@ export default function Navbar({ onOpenDemo }) {
             Modules
           </a>
           <a
+            className="font-mono-fine text-[11px] uppercase tracking-[0.12em] text-[#1E3329] font-medium bg-[#D6E2D8] px-2.5 py-1 rounded-full transition-colors flex items-center gap-1"
+            href="#app-showcase"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+            <span>App UI</span>
+          </a>
+          <a
             className="font-mono-fine text-[11px] uppercase tracking-[0.12em] text-[#5E6F66] hover:text-[#1E3329] transition-colors"
             href="#technical-highlights"
           >
@@ -94,6 +101,14 @@ export default function Navbar({ onOpenDemo }) {
             className="block py-2 text-[#5E6F66] hover:text-[#1E3329] border-b border-[#1E3329]/10"
           >
             Key Modules (10 Features)
+          </a>
+          <a
+            href="#app-showcase"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-[#1E3329] font-medium border-b border-[#1E3329]/10 flex items-center justify-between"
+          >
+            <span>Live App UI (16 Screens)</span>
+            <span className="text-[9px] bg-[#1E3329] text-[#7CF2C2] px-2 py-0.5 rounded-full font-mono-metric">LIVE</span>
           </a>
           <a
             href="#technical-highlights"

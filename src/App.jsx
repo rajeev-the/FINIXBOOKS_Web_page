@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import MeasurableImpact from './components/MeasurableImpact'
 import ProductSection from './components/ProductSection'
 import FeatureModules from './components/FeatureModules'
+import AppShowcase from './components/AppShowcase'
 import TechnicalHighlights from './components/TechnicalHighlights'
 import SourceRepositories from './components/SourceRepositories'
 import Stakeholders from './components/Stakeholders'
@@ -43,6 +44,10 @@ export default function App() {
 
         <ScrollReveal direction="up" delay={60}>
           <FeatureModules />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay={60}>
+          <AppShowcase />
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={60}>

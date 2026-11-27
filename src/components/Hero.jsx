@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RefreshCw, Copy, Check, Smartphone } from 'lucide-react'
+import { RefreshCw, Copy, Check } from 'lucide-react'
 import SyncStreamVisualizer from './SyncStreamVisualizer'
 
 const VOUCHER_DATA = [
@@ -89,21 +89,14 @@ export default function Hero({ onOpenDemo }) {
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
           <a
-            href="#app-showcase"
+            href="#features"
             className="btn-mint px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider flex items-center gap-1.5 cursor-pointer shadow-xs"
           >
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>Explore Product UI</span>
-          </a>
-          <a
-            href="#features"
-            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
-          >
-            <span>10 Key Modules</span>
+            <span>Explore 10 Key Modules</span>
           </a>
           <button
             onClick={onOpenDemo}
-            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#5E6F66] hover:text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
+            className="px-5 py-2.5 rounded-full text-xs font-mono-fine uppercase tracking-wider hairline-border bg-[#D6E2D8] text-[#1E3329] hover:bg-[#E4EAE4] hover:border-[#1E3329] transition-all cursor-pointer shadow-xs"
           >
             Request Demo
           </button>

@@ -1,6 +1,7 @@
 import React from 'react'
-import { ArrowUpRight, Smartphone } from 'lucide-react'
+import { ArrowUpRight, Monitor } from 'lucide-react'
 import screen06 from '../assets/screenshots/06-party-receivables-aging.jpeg'
+import webTrialBalance from '../assets/web_screenshots/08-trial-balance.jpeg'
 
 export default function Surfaces() {
   return (
@@ -24,53 +25,57 @@ export default function Surfaces() {
           href="#app-showcase"
           className="self-start sm:self-end font-mono-fine text-[11px] uppercase tracking-wider text-[#1E3329] hover:underline flex items-center gap-1.5 py-1"
         >
-          <Smartphone className="w-3.5 h-3.5 text-[#10B981]" />
-          <span>Explore 16 Mobile Screens</span>
+          <Monitor className="w-3.5 h-3.5 text-[#10B981]" />
+          <span>Explore 36 Product Screens</span>
           <ArrowUpRight className="w-3.5 h-3.5 text-[#5E6F66]" />
         </a>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Frame 1: Browser Trial Balance */}
+        {/* Frame 1: Browser Web Portal */}
         <div className="hairline-border bg-[#D6E2D8] overflow-hidden rounded-xs shadow-xs flex flex-col justify-between">
           <div>
             <div className="hairline-b bg-[#E4EAE4] px-4 py-2 flex items-center justify-between text-[10px] font-mono-fine text-[#5E6F66]">
-              <span className="font-medium text-[#1E3329]">CHROME / HTTPS</span>
+              <span className="font-medium text-[#1E3329]">CHROME / WEB PORTAL</span>
               <span className="uppercase">TRIAL BALANCE</span>
             </div>
             <div className="p-4 font-mono-fine text-xs">
-              <div className="text-sm font-medium text-[#1E3329]">Sharma Engineering Ltd.</div>
-              <div className="text-[10px] text-[#5E6F66] mb-3">FY 2024-25 • 31-Oct-2024</div>
+              <div className="flex items-center justify-between mb-3">
+                <div>
+                  <div className="text-sm font-medium text-[#1E3329]">Group Trial Balance</div>
+                  <div className="text-[10px] text-[#5E6F66]">FY 2026-27 • Live Tally Sync</div>
+                </div>
+                <a
+                  href="#app-showcase"
+                  className="text-[10px] text-[#1E3329] bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] px-2 py-1 rounded transition-colors"
+                >
+                  View Web
+                </a>
+              </div>
 
-              <div className="space-y-2 hairline-t pt-2.5">
-                <div className="flex justify-between text-[#5E6F66] text-[9px] uppercase tracking-wider pb-0.5">
-                  <span>PARTICULARS</span>
-                  <span>DEBIT / CREDIT</span>
-                </div>
-                <div className="flex justify-between text-[#1E3329]">
-                  <span>Capital Account</span>
-                  <span className="font-mono-metric font-medium">Cr ₹1,50,00,000</span>
-                </div>
-                <div className="flex justify-between text-[#1E3329]">
-                  <span>Current Assets</span>
-                  <span className="font-mono-metric font-medium">Dr ₹3,14,28,400</span>
-                </div>
-                <div className="flex justify-between text-[#1E3329]">
-                  <span>Sundry Debtors</span>
-                  <span className="font-mono-metric font-medium">Dr ₹1,24,91,000</span>
-                </div>
-                <div className="flex justify-between text-[#1E3329]">
-                  <span>Duties &amp; Taxes</span>
-                  <span className="font-mono-metric font-medium">Dr ₹43,00,000</span>
+              {/* Real Web Portal Preview Container */}
+              <div className="relative h-44 rounded-xs overflow-hidden hairline-border bg-[#0E1713]">
+                <img
+                  src={webTrialBalance}
+                  alt="Trial Balance Web Portal"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E1713]/80 via-transparent to-black/20 pointer-events-none"></div>
+                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] text-[#7CF2C2]">
+                  <span className="bg-[#0B1612]/90 px-2 py-0.5 rounded font-mono-metric">Balanced: Dr 242.5K</span>
+                  <span className="bg-[#0B1612]/90 px-2 py-0.5 rounded font-mono-metric">AlterID Sync</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="p-4 pt-0">
-            <div className="hairline-t pt-2.5 flex justify-between font-medium text-[#1E3329] font-mono-fine text-xs">
-              <span className="text-[10px] uppercase">BALANCED</span>
-              <span className="font-mono-metric text-sm">₹4,82,19,400</span>
+            <div className="hairline-t pt-2.5 flex justify-between text-[10px] text-[#5E6F66] font-mono-fine">
+              <span className="uppercase">STATUS</span>
+              <span className="text-[#1E3329] font-medium font-mono-metric text-xs flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                Zero Discrepancy
+              </span>
             </div>
           </div>
         </div>
@@ -133,16 +138,16 @@ export default function Surfaces() {
               <span className="uppercase">AGING REPORT</span>
             </div>
             <div className="p-4 font-mono-fine text-xs">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-3">
                 <div>
                   <div className="text-sm font-medium text-[#1E3329]">Abc Ltd • Debtor Aging</div>
-                  <div className="text-[10px] text-[#5E6F66] mb-3">Live Field Receivables</div>
+                  <div className="text-[10px] text-[#5E6F66]">Live Field Receivables</div>
                 </div>
                 <a
                   href="#app-showcase"
                   className="text-[10px] text-[#1E3329] bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] px-2 py-1 rounded transition-colors"
                 >
-                  View UI
+                  View Mobile
                 </a>
               </div>
 

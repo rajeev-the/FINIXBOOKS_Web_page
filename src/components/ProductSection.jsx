@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import daybookWeb from '../assets/web_screenshots/04-daybook-register.jpeg'
+import gstWeb from '../assets/web_screenshots/12-gst-summary.jpeg'
+import ratiosWeb from '../assets/web_screenshots/11-financial-ratios.jpeg'
 
 export default function ProductSection() {
   const [deployment, setDeployment] = useState('cloud') // 'cloud' | 'onprem'
@@ -35,7 +38,7 @@ export default function ProductSection() {
               One ledger. Multi-platform. Zero re-entry.
             </h2>
             <p className="font-mono-fine text-xs text-[#5E6F66] mt-2 leading-relaxed">
-              Eliminate day-end data entry bottlenecks. Field transactions booked on mobile stream seamlessly into desktop TallyPrime with immutable audit verification.
+              Eliminate day-end data entry bottlenecks. Field transactions stream seamlessly into desktop TallyPrime with immutable audit verification.
             </p>
           </div>
 
@@ -88,115 +91,78 @@ export default function ProductSection() {
           </div>
         </div>
 
-        {/* 3 Engraved Hatched Inline SVG Illustrations */}
+        {/* 3 Authentic Web Portal Surface Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-          {/* Plate I */}
-          <div className="hairline-border bg-[#E4EAE4] p-5 rounded-xs hover:border-[#1E3329]/40 transition-colors">
-            <div className="h-32 flex items-center justify-center hairline-b pb-3 mb-3">
-              <svg
-                fill="none"
-                height="80"
-                stroke="#1E3329"
-                strokeWidth="1"
-                viewBox="0 0 120 100"
-                width="96"
-              >
-                <rect height="70" rx="2" width="80" x="20" y="15" />
-                <line x1="28" x2="28" y1="15" y2="85" />
-                <line strokeDasharray="1 2" x1="20" x2="100" y1="25" y2="25" />
-                <line x1="35" x2="92" y1="35" y2="35" />
-                <line x1="35" x2="92" y1="43" y2="43" />
-                <line x1="35" x2="80" y1="51" y2="51" />
-                <line x1="35" x2="88" y1="59" y2="59" />
-                <line x1="35" x2="70" y1="67" y2="67" />
-                <path d="M58,15 L58,70 L63,65 L68,70 L68,15" fill="#D6E2D8" />
-                <g strokeOpacity="0.35">
-                  <line x1="22" x2="26" y1="18" y2="18" />
-                  <line x1="22" x2="26" y1="22" y2="22" />
-                  <line x1="22" x2="26" y1="26" y2="26" />
-                  <line x1="22" x2="26" y1="30" y2="30" />
-                  <line x1="22" x2="26" y1="34" y2="34" />
-                  <line x1="22" x2="26" y1="38" y2="38" />
-                </g>
-              </svg>
+          {/* Card I */}
+          <div className="hairline-border bg-[#E4EAE4] p-4 rounded-xs hover:border-[#1E3329]/40 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/8] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
+                <img
+                  src={daybookWeb}
+                  alt="Digital Day Book Web"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-xs uppercase font-mono-fine font-medium text-[#1E3329]">
+                Day Book Journal
+              </div>
+              <p className="text-xs font-mono-fine text-[#5E6F66] mt-1 leading-relaxed">
+                Chronological register with MCA tamper-proof AlterID audit logging.
+              </p>
             </div>
-            <div className="text-xs uppercase font-mono-fine font-medium text-[#1E3329]">
-              Plate I · The Ledger
+            <div className="pt-3 mt-3 hairline-t text-[10px] text-[#5E6F66] font-mono-fine flex justify-between">
+              <span>Web Interface</span>
+              <span className="text-[#1E3329] font-medium">Real-Time Sync</span>
             </div>
-            <p className="text-xs font-mono-fine text-[#5E6F66] mt-1.5 leading-relaxed">
-              Double-entry register with MCA audit logging.
-            </p>
           </div>
 
-          {/* Plate II */}
-          <div className="hairline-border bg-[#E4EAE4] p-5 rounded-xs hover:border-[#1E3329]/40 transition-colors">
-            <div className="h-32 flex items-center justify-center hairline-b pb-3 mb-3">
-              <svg
-                fill="none"
-                height="80"
-                stroke="#1E3329"
-                strokeWidth="1"
-                viewBox="0 0 120 100"
-                width="96"
-              >
-                <circle cx="60" cy="50" r="38" />
-                <circle cx="60" cy="50" r="34" strokeDasharray="2 2" />
-                <circle cx="60" cy="50" r="28" />
-                <path d="M60,22 L60,78 M32,50 L88,50" strokeOpacity="0.2" />
-                <path d="M48,36 L48,64 M72,36 L72,64" strokeOpacity="0.2" />
-                <text
-                  fill="#1E3329"
-                  fontFamily="Newsreader, serif"
-                  fontSize="28"
-                  stroke="none"
-                  textAnchor="middle"
-                  x="60"
-                  y="58"
-                >
-                  ₹
-                </text>
-              </svg>
+          {/* Card II */}
+          <div className="hairline-border bg-[#E4EAE4] p-4 rounded-xs hover:border-[#1E3329]/40 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/8] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
+                <img
+                  src={gstWeb}
+                  alt="GST Tax Summary Web"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-xs uppercase font-mono-fine font-medium text-[#1E3329]">
+                GST Compliance
+              </div>
+              <p className="text-xs font-mono-fine text-[#5E6F66] mt-1 leading-relaxed">
+                Automated Output Tax, Input Tax Credit (ITC), and liability offset.
+              </p>
             </div>
-            <div className="text-xs uppercase font-mono-fine font-medium text-[#1E3329]">
-              Plate II · Rupee Seal
+            <div className="pt-3 mt-3 hairline-t text-[10px] text-[#5E6F66] font-mono-fine flex justify-between">
+              <span>Web Interface</span>
+              <span className="text-[#1E3329] font-medium">100% Reconciled</span>
             </div>
-            <p className="text-xs font-mono-fine text-[#5E6F66] mt-1.5 leading-relaxed">
-              Automated TDS, TCS, IGST, and CGST splits.
-            </p>
           </div>
 
-          {/* Plate III */}
-          <div className="hairline-border bg-[#E4EAE4] p-5 rounded-xs hover:border-[#1E3329]/40 transition-colors">
-            <div className="h-32 flex items-center justify-center hairline-b pb-3 mb-3">
-              <svg
-                fill="none"
-                height="80"
-                stroke="#1E3329"
-                strokeWidth="1"
-                viewBox="0 0 120 100"
-                width="96"
-              >
-                <rect height="70" width="70" x="25" y="15" />
-                <rect height="14" width="60" x="30" y="22" />
-                <circle cx="82" cy="29" fill="#1E3329" r="2" />
-                <circle cx="75" cy="29" fill="#7CF2C2" r="2" />
-                <rect height="14" width="60" x="30" y="42" />
-                <circle cx="82" cy="49" fill="#1E3329" r="2" />
-                <rect height="14" width="60" x="30" y="62" />
-                <circle cx="82" cy="69" fill="#1E3329" r="2" />
-                <g strokeOpacity="0.3">
-                  <line x1="34" x2="60" y1="29" y2="29" />
-                  <line x1="34" x2="54" y1="49" y2="49" />
-                  <line x1="34" x2="64" y1="69" y2="69" />
-                </g>
-              </svg>
+          {/* Card III */}
+          <div className="hairline-border bg-[#E4EAE4] p-4 rounded-xs hover:border-[#1E3329]/40 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/8] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
+                <img
+                  src={ratiosWeb}
+                  alt="Financial Position & Ratios Web"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-xs uppercase font-mono-fine font-medium text-[#1E3329]">
+                Financial Ratios
+              </div>
+              <p className="text-xs font-mono-fine text-[#5E6F66] mt-1 leading-relaxed">
+                Automated liquidity, working capital, solvency, and profitability ratios.
+              </p>
             </div>
-            <div className="text-xs uppercase font-mono-fine font-medium text-[#1E3329]">
-              Plate III · Sync Relay
+            <div className="pt-3 mt-3 hairline-t text-[10px] text-[#5E6F66] font-mono-fine flex justify-between">
+              <span>Web Interface</span>
+              <span className="text-[#1E3329] font-medium">Dynamic Metrics</span>
             </div>
-            <p className="text-xs font-mono-fine text-[#5E6F66] mt-1.5 leading-relaxed">
-              15MB daemon on localhost:9000.
-            </p>
           </div>
         </div>
       </div>

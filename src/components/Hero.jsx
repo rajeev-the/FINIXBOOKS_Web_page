@@ -52,6 +52,8 @@ export default function Hero({ onOpenDemo }) {
               <img
                 src={heroWebImg}
                 alt="FinixBooks Web Desktop Interface"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto object-cover block"
               />
             </div>
@@ -63,6 +65,8 @@ export default function Hero({ onOpenDemo }) {
               <img
                 src={heroMobImg}
                 alt="FinixBooks Mobile Executive Dashboard"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto object-cover block"
               />
             </div>

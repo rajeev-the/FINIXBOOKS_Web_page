@@ -74,6 +74,8 @@ export default function CapabilitiesBento() {
                 <img
                   src={c.img}
                   alt={c.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-56 object-cover object-top block"
                 />
               </div>

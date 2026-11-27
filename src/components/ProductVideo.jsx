@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX, Maximize, RotateCcw } from 'lucide-react';
 import videoSrc from '../assets/video/finixbooks_story_80s.mp4';
+import posterImg from '../assets/web_screenshots/02-receivables-aging.jpeg';
 
 export default function ProductVideo() {
+  const sectionRef = useRef(null);
   const videoRef = useRef(null);
+  const [preloadMode, setPreloadMode] = useState('metadata');
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -67,7 +70,20 @@ export default function ProductVideo() {
   };
 
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setPreloadMode('auto');
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '250px' }
+    );
+    observer.observe(el);
     return () => {
+      observer.disconnect();
       if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
     };
   }, []);
@@ -75,7 +91,11 @@ export default function ProductVideo() {
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <section className="surface-gradient py-20 sm:py-24 px-6 sm:px-8" id="product-story">
+    <section
+      ref={sectionRef}
+      className="surface-gradient py-20 sm:py-24 px-6 sm:px-8"
+      id="product-story"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
@@ -100,6 +120,7 @@ export default function ProductVideo() {
             <video
               ref={videoRef}
               src={videoSrc}
+              poster={posterImg}
               className="w-full h-full object-cover cursor-pointer"
               onClick={togglePlay}
               onTimeUpdate={() => videoRef.current && setCurrentTime(videoRef.current.currentTime)}
@@ -109,7 +130,7 @@ export default function ProductVideo() {
                 setShowControls(true);
               }}
               playsInline
-              preload="metadata"
+              preload={preloadMode}
             />
 
             {!isPlaying && (

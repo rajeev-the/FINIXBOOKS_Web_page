@@ -155,6 +155,8 @@ export default function AppShowcase() {
             <img
               src={active.src}
               alt={active.title}
+              loading="lazy"
+              decoding="async"
               className={
                 platform === 'web'
                   ? 'w-full max-h-[540px] object-contain'
@@ -178,6 +180,8 @@ export default function AppShowcase() {
                 <img
                   src={s.src}
                   alt={s.title}
+                  loading="lazy"
+                  decoding="async"
                   className={platform === 'web' ? 'w-28 h-16 object-cover' : 'w-14 h-24 object-cover'}
                 />
               </button>

@@ -5,6 +5,7 @@ import MeasurableImpact from './components/MeasurableImpact'
 import ProductSection from './components/ProductSection'
 import FeatureModules from './components/FeatureModules'
 import AppShowcase from './components/AppShowcase'
+import ProductVideo from './components/ProductVideo'
 import TechnicalHighlights from './components/TechnicalHighlights'
 import SourceRepositories from './components/SourceRepositories'
 import Stakeholders from './components/Stakeholders'
@@ -37,6 +38,11 @@ export default function App() {
         {/* Product Showcase placed right at the top */}
         <ScrollReveal direction="up" delay={60}>
           <AppShowcase />
+        </ScrollReveal>
+
+        {/* 80s Product Story Video */}
+        <ScrollReveal direction="up" delay={60}>
+          <ProductVideo />
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={60}>

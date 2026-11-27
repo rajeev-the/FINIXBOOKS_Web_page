@@ -9,11 +9,6 @@ export default function Hero({ onOpenDemo }) {
       <div className="max-w-7xl mx-auto">
         {/* Minimal Centered Copy */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/8 border border-white/15 text-[11px] font-medium tracking-wide text-[#7CF2C2] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7CF2C2] animate-pulse" />
-            <span>Bidirectional TallyPrime Sync</span>
-          </div>
-
           <h1 className="font-serif-display text-4xl sm:text-6xl lg:text-[68px] font-normal tracking-tight leading-[1.06] text-white mb-5">
             Tally, <span className="italic text-[#7CF2C2]">everywhere</span> you work.
           </h1>

@@ -96,7 +96,7 @@ export default function ProductSection() {
           {/* Card I */}
           <div className="hairline-border bg-[#E4EAE4] p-4 rounded-xs hover:border-[#1E3329]/40 transition-colors flex flex-col justify-between">
             <div>
-              <div className="relative aspect-[16/8] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
+              <div className="relative aspect-[1600/701] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
                 <img
                   src={daybookWeb}
                   alt="Digital Day Book Web"
@@ -120,7 +120,7 @@ export default function ProductSection() {
           {/* Card II */}
           <div className="hairline-border bg-[#E4EAE4] p-4 rounded-xs hover:border-[#1E3329]/40 transition-colors flex flex-col justify-between">
             <div>
-              <div className="relative aspect-[16/8] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
+              <div className="relative aspect-[1600/701] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
                 <img
                   src={gstWeb}
                   alt="GST Tax Summary Web"
@@ -144,7 +144,7 @@ export default function ProductSection() {
           {/* Card III */}
           <div className="hairline-border bg-[#E4EAE4] p-4 rounded-xs hover:border-[#1E3329]/40 transition-colors flex flex-col justify-between">
             <div>
-              <div className="relative aspect-[16/8] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
+              <div className="relative aspect-[1600/701] bg-black rounded-xs overflow-hidden mb-3 hairline-border">
                 <img
                   src={ratiosWeb}
                   alt="Financial Position & Ratios Web"

@@ -9,7 +9,7 @@ import {
   Grid,
 } from 'lucide-react'
 
-// 16 Mobile Screenshots
+// 16 Mobile Screenshots (720x1600)
 import mob01 from '../assets/screenshots/01-loading-workspace.jpeg'
 import mob02 from '../assets/screenshots/02-tenant-selection.jpeg'
 import mob03 from '../assets/screenshots/03-executive-dashboard.jpeg'
@@ -27,7 +27,7 @@ import mob14 from '../assets/screenshots/14-journal-adjustment.jpeg'
 import mob15 from '../assets/screenshots/15-customer-master.jpeg'
 import mob16 from '../assets/screenshots/16-expense-master.jpeg'
 
-// 20 Web / Desktop Screenshots
+// 20 Web / Desktop Screenshots (1600x701)
 import web01 from '../assets/web_screenshots/01-ai-insights.jpeg'
 import web02 from '../assets/web_screenshots/02-receivables-aging.jpeg'
 import web03 from '../assets/web_screenshots/03-payables-overview.jpeg'
@@ -448,20 +448,20 @@ export default function AppShowcase() {
           </h2>
           <p className="font-mono-fine text-xs text-[#5E6F66] mt-1.5">
             {platform === 'web'
-              ? '20 high-res desktop views — registers, balance sheets, GST summary & OCR entry.'
-              : '16 Flutter mobile views — field vouchers, WhatsApp debtor reminders & Tally sync.'}
+              ? '20 desktop views — registers, balance sheets, GST summary & OCR entry.'
+              : '16 mobile views — field vouchers, WhatsApp debtor reminders & Tally sync.'}
           </p>
         </div>
 
-        {/* Dual Switcher: Platform (Web / Mobile) & View (Device / Grid) */}
+        {/* Dual Switcher: Platform & View */}
         <div className="flex flex-wrap items-center gap-2 self-start md:self-auto">
           {/* Platform Switcher */}
           <div className="bg-[#D6E2D8] p-1 rounded-full hairline-border flex items-center gap-1 text-[11px] font-mono-fine">
             <button
               onClick={() => handlePlatformChange('web')}
-              className={`px-3 py-1 rounded-full transition-all cursor-pointer flex items-center gap-1.5 ${
+              className={`px-3.5 py-1 rounded-full transition-all cursor-pointer flex items-center gap-1.5 ${
                 platform === 'web'
-                  ? 'bg-[#1E3329] text-[#7CF2C2] font-medium'
+                  ? 'bg-[#1E3329] text-[#7CF2C2] font-medium shadow-xs'
                   : 'text-[#5E6F66] hover:text-[#1E3329]'
               }`}
             >
@@ -470,9 +470,9 @@ export default function AppShowcase() {
             </button>
             <button
               onClick={() => handlePlatformChange('mobile')}
-              className={`px-3 py-1 rounded-full transition-all cursor-pointer flex items-center gap-1.5 ${
+              className={`px-3.5 py-1 rounded-full transition-all cursor-pointer flex items-center gap-1.5 ${
                 platform === 'mobile'
-                  ? 'bg-[#1E3329] text-[#7CF2C2] font-medium'
+                  ? 'bg-[#1E3329] text-[#7CF2C2] font-medium shadow-xs'
                   : 'text-[#5E6F66] hover:text-[#1E3329]'
               }`}
             >
@@ -539,23 +539,23 @@ export default function AppShowcase() {
 
       {/* VIEW 1: DEVICE VIEW (Browser Mockup for Web, Phone Mockup for Mobile) */}
       {viewMode === 'device' && (
-        <div className="bg-[#D6E2D8] hairline-border rounded-xs p-6 sm:p-8">
+        <div className="bg-[#D6E2D8] hairline-border rounded-xs p-5 sm:p-7">
           {platform === 'web' ? (
-            /* DESKTOP BROWSER CHASSIS */
-            <div className="space-y-6">
+            /* DESKTOP BROWSER CHASSIS (Perfect 1600:701 Alignment) */
+            <div className="space-y-5">
               {/* Browser Window Frame */}
               <div className="bg-[#0E1713] rounded-xs overflow-hidden shadow-2xl hairline-border ring-1 ring-white/10 group">
                 {/* Browser Top Bar */}
-                <div className="px-4 py-2.5 bg-[#12231C] hairline-b flex items-center justify-between font-mono-fine text-[11px] text-[#89A799]">
+                <div className="px-4 py-2 bg-[#12231C] hairline-b flex items-center justify-between font-mono-fine text-[11px] text-[#89A799]">
                   {/* Window Dots */}
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#E55353]/70"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#E5B553]/70"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#53E58D]/70"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#E55353]/80"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#E5B553]/80"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#53E58D]/80"></span>
                   </div>
 
                   {/* Browser URL Pill */}
-                  <div className="px-4 py-0.5 rounded-full bg-[#050B08] text-[#7CF2C2] text-[10px] font-mono-metric flex items-center gap-2 max-w-sm w-full justify-center truncate">
+                  <div className="px-4 py-0.5 rounded-full bg-[#050B08] text-[#7CF2C2] text-[10px] font-mono-metric flex items-center gap-1.5 max-w-xs sm:max-w-sm w-full justify-center truncate">
                     <span className="text-[#5E6F66]">https://</span>
                     <span>app.finixbooks.in/{currentScreen.id}</span>
                   </div>
@@ -571,30 +571,30 @@ export default function AppShowcase() {
                   </button>
                 </div>
 
-                {/* Screenshot in 1600x701 Aspect Ratio */}
+                {/* Screenshot Container - Exactly matches 1600x701 native ratio */}
                 <div
                   onClick={() => openLightbox(selectedIndex)}
-                  className="relative aspect-[16/7] bg-[#050B08] overflow-hidden cursor-zoom-in group"
+                  className="relative w-full aspect-[1600/701] bg-[#050B08] overflow-hidden cursor-zoom-in group"
                 >
                   <img
                     src={currentScreen.src}
                     alt={currentScreen.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.01]"
+                    className="w-full h-full object-contain object-top transition-transform duration-300 group-hover:scale-[1.008]"
                   />
                   
-                  {/* Subtle hover zoom pill */}
-                  <div className="absolute inset-0 bg-[#0B1612]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  {/* Subtle hover zoom hint */}
+                  <div className="absolute inset-0 bg-[#0B1612]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                     <div className="px-3 py-1.5 rounded-full bg-[#0B1612]/90 text-[#7CF2C2] text-xs font-mono-fine flex items-center gap-1.5 shadow-md">
                       <Maximize2 className="w-3.5 h-3.5" />
-                      <span>Inspect 100% Full Resolution</span>
+                      <span>Inspect Full Resolution</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Caption & Controls Strip below Browser */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono-fine text-xs pt-2">
-                <div>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono-fine text-xs pt-1">
+                <div className="max-w-2xl">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-[10px] uppercase tracking-wider text-[#5E6F66]">
                       {currentScreen.topic}
@@ -606,16 +606,16 @@ export default function AppShowcase() {
                   <h3 className="font-serif-display text-xl sm:text-2xl text-[#1E3329] font-normal tracking-tight">
                     {currentScreen.title}
                   </h3>
-                  <p className="text-xs text-[#5E6F66] mt-1 max-w-2xl">
+                  <p className="text-xs text-[#5E6F66] mt-1 leading-relaxed">
                     {currentScreen.desc}
                   </p>
                 </div>
 
                 {/* Prev / Next controls */}
-                <div className="flex items-center gap-3 shrink-0">
+                <div className="flex items-center gap-3 shrink-0 self-start sm:self-center">
                   <button
                     onClick={handlePrev}
-                    className="p-2 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer"
+                    className="p-2 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer shadow-xs"
                     aria-label="Previous"
                   >
                     <ChevronLeft className="w-4 h-4" />
@@ -625,7 +625,7 @@ export default function AppShowcase() {
                   </span>
                   <button
                     onClick={handleNext}
-                    className="p-2 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer"
+                    className="p-2 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer shadow-xs"
                     aria-label="Next"
                   >
                     <ChevronRight className="w-4 h-4" />
@@ -635,20 +635,22 @@ export default function AppShowcase() {
 
               {/* Clean Thumbnail Strip for Web */}
               <div className="pt-3 hairline-t">
-                <div className="text-[10px] uppercase text-[#5E6F66] tracking-wider mb-2 font-mono-fine">
-                  DESKTOP SCREENS ({currentDataset.length}):
+                <div className="flex items-center justify-between text-[10px] uppercase text-[#5E6F66] tracking-wider mb-2 font-mono-fine">
+                  <span>DESKTOP SCREENS ({filteredScreens.length}):</span>
+                  <span>Click thumbnail to switch</span>
                 </div>
-                <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-                  {currentDataset.map((screen, idx) => {
-                    const isSelected = selectedIndex === idx
+                <div className="flex items-center gap-2 overflow-x-auto pb-1.5 no-scrollbar">
+                  {filteredScreens.map((screen) => {
+                    const originalIdx = currentDataset.findIndex((s) => s.id === screen.id)
+                    const isSelected = selectedIndex === originalIdx
                     return (
                       <button
                         key={screen.id}
-                        onClick={() => setSelectedIndex(idx)}
-                        className={`relative shrink-0 w-24 aspect-[16/7] rounded-xs overflow-hidden transition-all cursor-pointer ${
+                        onClick={() => setSelectedIndex(originalIdx)}
+                        className={`relative shrink-0 w-24 aspect-[1600/701] rounded-xs overflow-hidden transition-all cursor-pointer ${
                           isSelected
-                            ? 'ring-2 ring-[#1E3329] shadow-sm'
-                            : 'opacity-50 hover:opacity-100 hairline-border'
+                            ? 'ring-2 ring-[#1E3329] shadow-sm scale-[1.02]'
+                            : 'opacity-55 hover:opacity-100 hairline-border'
                         }`}
                         title={screen.title}
                       >
@@ -664,10 +666,11 @@ export default function AppShowcase() {
               </div>
             </div>
           ) : (
-            /* SMARTPHONE CHASSIS FOR MOBILE */
+            /* SMARTPHONE CHASSIS (Perfect 720:1600 Alignment) */
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              {/* Phone Device Column */}
               <div className="md:col-span-5 flex flex-col items-center">
-                <div className="relative w-full max-w-[270px] aspect-[9/19] bg-[#0E1713] rounded-[36px] p-2.5 shadow-xl hairline-border ring-1 ring-white/10 group">
+                <div className="relative w-full max-w-[270px] aspect-[720/1600] bg-[#0E1713] rounded-[36px] p-2.5 shadow-xl hairline-border ring-1 ring-white/10 group">
                   <div className="relative w-full h-full bg-black rounded-[28px] overflow-hidden border border-[#1E3329]/40">
                     <div
                       onClick={() => openLightbox(selectedIndex)}
@@ -677,7 +680,7 @@ export default function AppShowcase() {
                       <img
                         src={currentScreen.src}
                         alt={currentScreen.title}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-contain object-top"
                       />
                       <div className="absolute inset-0 bg-[#0B1612]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <div className="px-2.5 py-1 rounded-full bg-[#0B1612]/90 text-[#7CF2C2] text-[11px] font-mono-fine flex items-center gap-1.5">
@@ -689,10 +692,11 @@ export default function AppShowcase() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 mt-5 font-mono-fine text-xs">
+                {/* Prev / Next controls */}
+                <div className="flex items-center gap-4 mt-4 font-mono-fine text-xs">
                   <button
                     onClick={handlePrev}
-                    className="p-1.5 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer"
+                    className="p-1.5 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer shadow-xs"
                     aria-label="Previous"
                   >
                     <ChevronLeft className="w-4 h-4" />
@@ -702,7 +706,7 @@ export default function AppShowcase() {
                   </span>
                   <button
                     onClick={handleNext}
-                    className="p-1.5 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer"
+                    className="p-1.5 rounded-full bg-[#E4EAE4] hover:bg-[#1E3329] hover:text-[#7CF2C2] transition-colors cursor-pointer shadow-xs"
                     aria-label="Next"
                   >
                     <ChevronRight className="w-4 h-4" />
@@ -710,7 +714,8 @@ export default function AppShowcase() {
                 </div>
               </div>
 
-              <div className="md:col-span-7 flex flex-col justify-between font-mono-fine space-y-6">
+              {/* Context Details Column (Vertically Centered & Aligned) */}
+              <div className="md:col-span-7 flex flex-col justify-center font-mono-fine space-y-6">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-[10px] uppercase tracking-wider text-[#5E6F66]">
@@ -740,21 +745,24 @@ export default function AppShowcase() {
                   </div>
                 </div>
 
+                {/* Clean Thumbnail Strip for Mobile */}
                 <div className="pt-4 hairline-t">
-                  <div className="text-[10px] uppercase text-[#5E6F66] tracking-wider mb-2">
-                    MOBILE SCREENS ({currentDataset.length}):
+                  <div className="flex items-center justify-between text-[10px] uppercase text-[#5E6F66] tracking-wider mb-2">
+                    <span>MOBILE SCREENS ({filteredScreens.length}):</span>
+                    <span>Click thumbnail to switch</span>
                   </div>
-                  <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-                    {currentDataset.map((screen, idx) => {
-                      const isSelected = selectedIndex === idx
+                  <div className="flex items-center gap-2 overflow-x-auto pb-1.5 no-scrollbar">
+                    {filteredScreens.map((screen) => {
+                      const originalIdx = currentDataset.findIndex((s) => s.id === screen.id)
+                      const isSelected = selectedIndex === originalIdx
                       return (
                         <button
                           key={screen.id}
-                          onClick={() => setSelectedIndex(idx)}
-                          className={`relative shrink-0 w-11 sm:w-12 aspect-[9/18] rounded-xs overflow-hidden transition-all cursor-pointer ${
+                          onClick={() => setSelectedIndex(originalIdx)}
+                          className={`relative shrink-0 w-11 sm:w-12 aspect-[720/1600] rounded-xs overflow-hidden transition-all cursor-pointer ${
                             isSelected
-                              ? 'ring-2 ring-[#1E3329] shadow-sm'
-                              : 'opacity-50 hover:opacity-100 hairline-border'
+                              ? 'ring-2 ring-[#1E3329] shadow-sm scale-105'
+                              : 'opacity-55 hover:opacity-100 hairline-border'
                           }`}
                           title={screen.title}
                         >
@@ -791,12 +799,12 @@ export default function AppShowcase() {
               >
                 <div>
                   <div className={`relative bg-black rounded-xs overflow-hidden mb-2 ${
-                    platform === 'web' ? 'aspect-[16/7]' : 'aspect-[9/18]'
+                    platform === 'web' ? 'aspect-[1600/701]' : 'aspect-[720/1600]'
                   }`}>
                     <img
                       src={screen.src}
                       alt={screen.title}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-contain object-top"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-[#0B1612]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -849,10 +857,10 @@ export default function AppShowcase() {
 
           {/* Centered Image with Clean Minimal Caption */}
           <div className={`w-full flex flex-col items-center ${
-            platform === 'web' ? 'max-w-4xl' : 'max-w-md'
+            platform === 'web' ? 'max-w-5xl' : 'max-w-md'
           }`}>
             <div className={`w-full bg-black rounded-xs overflow-hidden p-1 shadow-2xl border border-white/20 ${
-              platform === 'web' ? 'aspect-[16/7]' : 'max-w-[300px] aspect-[9/19] rounded-[32px]'
+              platform === 'web' ? 'aspect-[1600/701]' : 'max-w-[300px] aspect-[720/1600] rounded-[32px]'
             }`}>
               <img
                 src={currentDataset[lightboxIndex].src}

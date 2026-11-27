@@ -34,6 +34,11 @@ export default function App() {
       <main className="relative z-10 w-full pt-4">
         <Hero onOpenDemo={handleOpenDemo} />
 
+        {/* Product Showcase placed right at the top */}
+        <ScrollReveal direction="up" delay={60}>
+          <AppShowcase />
+        </ScrollReveal>
+
         <ScrollReveal direction="up" delay={60}>
           <MeasurableImpact />
         </ScrollReveal>
@@ -44,10 +49,6 @@ export default function App() {
 
         <ScrollReveal direction="up" delay={60}>
           <FeatureModules />
-        </ScrollReveal>
-
-        <ScrollReveal direction="up" delay={60}>
-          <AppShowcase />
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={60}>

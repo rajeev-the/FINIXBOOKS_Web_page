@@ -228,14 +228,15 @@ export default function AppShowcase() {
       {/* Minimal Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
         <div>
-          <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium mb-1.5">
-            APP INTERFACE
+          <div className="text-[10px] uppercase font-mono-fine tracking-[0.2em] text-[#5E6F66] font-medium mb-1.5 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] inline-block"></span>
+            OUR PRODUCT
           </div>
           <h2 className="font-serif-display text-3xl sm:text-4xl text-[#1E3329] font-normal tracking-tight">
-            Mobile UI Showcase.
+            FinixBooks in Action.
           </h2>
           <p className="font-mono-fine text-xs text-[#5E6F66] mt-1.5">
-            16 real Flutter screens — field voucher booking, aging analytics, and Tally sync.
+            16 real application screens — on-the-go voucher booking, debtor aging, and instant Tally sync.
           </p>
         </div>
 
